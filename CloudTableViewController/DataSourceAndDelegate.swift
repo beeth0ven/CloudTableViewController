@@ -146,7 +146,7 @@ struct Section<SectionStyle, CellStyle> {
 
 /// 默认的 SectionStyle , 通常在只有一种 Section 时使用
 enum DefaultSectionStyle {
-    case Section   //目录
+    case Section
 }
 
 
