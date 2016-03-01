@@ -18,6 +18,8 @@
 		45624BD81C8434A500BBC693 /* InternetIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45624BD71C8434A500BBC693 /* InternetIndicator.swift */; };
 		45624BDA1C84354600BBC693 /* DataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45624BD91C84354600BBC693 /* DataSourceAndDelegate.swift */; };
 		45624BDC1C8435D500BBC693 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45624BDB1C8435D500BBC693 /* Extension.swift */; };
+		45624BDE1C8533B700BBC693 /* CloudDataControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45624BDD1C8533B700BBC693 /* CloudDataControllerType.swift */; };
+		459D971A1C855C3F00387157 /* CloudTableViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459D97191C855C3F00387157 /* CloudTableViewControllerType.swift */; };
 		A4443F3C140286E68340B5AD /* libPods-CloudTableViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0150381273353BF3DBD784EB /* libPods-CloudTableViewController.a */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		45624BD71C8434A500BBC693 /* InternetIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = InternetIndicator.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		45624BD91C84354600BBC693 /* DataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DataSourceAndDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		45624BDB1C8435D500BBC693 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		45624BDD1C8533B700BBC693 /* CloudDataControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDataControllerType.swift; sourceTree = "<group>"; };
+		459D97191C855C3F00387157 /* CloudTableViewControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTableViewControllerType.swift; sourceTree = "<group>"; };
 		4F19E15B075F610A2A621B99 /* Pods-CloudTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudTableViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudTableViewController/Pods-CloudTableViewController.release.xcconfig"; sourceTree = "<group>"; };
 		CED273B24B0866C3BF3C2515 /* Pods-CloudTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudTableViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudTableViewController/Pods-CloudTableViewController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,8 +80,9 @@
 			children = (
 				45544E241C83F52C00D8434B /* Main.storyboard */,
 				45544E331C83F56E00D8434B /* CloudTableViewController.swift */,
+				459D97191C855C3F00387157 /* CloudTableViewControllerType.swift */,
 				45624BD51C842B1C00BBC693 /* DataController.swift */,
-				45624BD91C84354600BBC693 /* DataSourceAndDelegate.swift */,
+				45624BDD1C8533B700BBC693 /* CloudDataControllerType.swift */,
 				45544E321C83F53D00D8434B /* Supporting Files */,
 			);
 			path = CloudTableViewController;
@@ -86,6 +91,7 @@
 		45544E321C83F53D00D8434B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				45624BD91C84354600BBC693 /* DataSourceAndDelegate.swift */,
 				45624BD71C8434A500BBC693 /* InternetIndicator.swift */,
 				45544E3B1C84043C00D8434B /* Request.swift */,
 				45544E351C83F5E400D8434B /* Queue.swift */,
@@ -239,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45624BD61C842B1C00BBC693 /* DataController.swift in Sources */,
+				459D971A1C855C3F00387157 /* CloudTableViewControllerType.swift in Sources */,
 				45624BDA1C84354600BBC693 /* DataSourceAndDelegate.swift in Sources */,
 				45544E211C83F52C00D8434B /* AppDelegate.swift in Sources */,
 				45544E3C1C84043C00D8434B /* Request.swift in Sources */,
@@ -246,6 +253,7 @@
 				45624BD81C8434A500BBC693 /* InternetIndicator.swift in Sources */,
 				45544E341C83F56E00D8434B /* CloudTableViewController.swift in Sources */,
 				45624BDC1C8435D500BBC693 /* Extension.swift in Sources */,
+				45624BDE1C8533B700BBC693 /* CloudDataControllerType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

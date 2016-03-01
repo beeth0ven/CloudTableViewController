@@ -8,8 +8,8 @@
 
 import Foundation
 
-/// 网络指示器，表示是否正在访问网络，可看做一个小型代理
-protocol InternetIndicator {
+/// 网络指示器，表示是否正在访问网络，可看做是一个小型代理
+protocol InternetIndicator: class {
     func willAccessInternet()   // 即将访问网络
     func didAccessInternet()    // 网络访问结束
 }

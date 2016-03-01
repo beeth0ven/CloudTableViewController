@@ -8,30 +8,26 @@
 
 import UIKit
 
-class CloudTableViewController: UITableViewController {
-    // MARK: - Required
-    
-    @IBInspectable var canRefresh: Bool = false
-    @IBInspectable var multiPages: Bool = false
-    
-    private var dataController = DataController() // View Model
-    
-    var dataSourceAndDelegate = MJRefreshDSAD<SectionStyle, CellStyle>()
+class CloudTableViewController: UITableViewController, CloudTableViewControllerType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupDataSourceAndDelegate()
         refreshData()
     }
     
+    // MARK: - Required
     
-    func setupDataSourceAndDelegate() {
-        
-        dataSourceAndDelegate.tableView = tableView
-        configureDataSourceAndDelegate()
-        enableRefreshIfNeeded()
-
+    typealias SectionStyle = DefaultSectionStyle
+    
+    @IBInspectable var canRefresh: Bool {
+        get { return canRefreshAssociatedValue }
+        set { canRefreshAssociatedValue = newValue }
+    }
+    
+    @IBInspectable var multiPages: Bool {
+        get { return multiPagesAssociatedValue }
+        set { multiPagesAssociatedValue = newValue }
     }
     
     func configureDataSourceAndDelegate() {
@@ -51,56 +47,10 @@ class CloudTableViewController: UITableViewController {
     }
     
     func updateUI() {
-        dataSourceAndDelegate.sections = [Section(sectionStyle: .Default, cellStyles: dataController.data.map { .Basic($0) })]
+        dataSourceAndDelegate.sections = [Section(sectionStyle: .Section, cellStyles: dataController.data.map { .Basic($0) })]
     }
     
     enum CellStyle {
         case Basic(String)
     }
-    
-    // MARK: - Helper
-
-    func resetData() {
-        tableView.mj_footer?.endRefreshing()
-        dataSourceAndDelegate.sections = []
-    }
-    
-    @IBAction func refreshData() {
-        resetData()
-        dataController.getDataInBackground(
-            indicator: tableView.mj_header,
-            didGet: { [weak self] in
-                self?.updateUI()
-            }
-        )
-    }
-    
-    func getMoreData() {
-        dataController.getMoreDataInBackground(
-            indicator: tableView.mj_footer,
-            didGet: { [weak self] in
-                self?.updateUI()
-            })
-    }
-    
-    func enableRefreshIfNeeded() {
-        
-        
-        if canRefresh {
-            dataSourceAndDelegate.mjRefreshClosure = {
-                [unowned self] in
-                self.refreshData()
-            }
-        }
-        
-        if multiPages {
-            
-            dataSourceAndDelegate.mjGetMoreDataClosure = {
-                [unowned self] in
-                self.getMoreData()
-            }
-        }
-        
-    }
-
 }

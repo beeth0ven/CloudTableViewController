@@ -11,7 +11,7 @@ import Foundation
 struct Request {
     
     static func post(api api: String, params: [String: AnyObject]? = nil, didGet: (Result) -> Void) {
-        Queue.Main.executeAfter(seconds: 3, closure: {
+        Queue.Main.executeAfter(seconds: 2, closure: {
             didGet(.Success([:]))
         })
     }

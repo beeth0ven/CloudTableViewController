@@ -11,80 +11,8 @@ import UIKit
 // MARK: - Public
 
 /**
- Turn UITableView delegate based API to block based API, Usage:
- ```swift
-class ViewController: UIViewController {
- 
-    var dataSourceAndDelegate = DataSourceAndDelegate<SectionStyle, CellStyle>()
-
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            dataSourceAndDelegate.tableView = tableView
-        }
-    }
- 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupDataSourceAndDelegate()
-        refreshData()
-    }
-    
-    func setupDataSourceAndDelegate() {
-
-        dataSourceAndDelegate.tableView = tableView
-
-        dataSourceAndDelegate.reuseIdentifierForCellStyle = {
-            cellStyle in
-            return "cell"
-        }
-        
-        dataSourceAndDelegate.configureCellForCellStyle = {
-            cell, cellStyle in
-            cell.textLabel?.text = cellStyle.rawValue
-        }
-        
-        dataSourceAndDelegate.titleForSectionStyle = {
-            sectionStyle in
-            return sectionStyle.rawValue
-        }
-        
-        dataSourceAndDelegate.didSelectCellStyle = {
-            cellStyle in
-            print("did Select: \(cellStyle.rawValue)")
-        }
-    }
-    
-    func refreshData() {
-        dataSourceAndDelegate.sections = [
-            Section(sectionStyle: .OverView, cellStyles: [.Name, .Detail, .Time]),
-            Section(sectionStyle: .Author,   cellStyles: [.AuthorName, .AuthorImage, .AuthorAge]),
-            Section(sectionStyle: .Footer,   cellStyles: [.LikeNumber, .FollowNumer, .Time]),
-        ]
-    }
-    
-    enum SectionStyle: String {
-        case OverView
-        case Author
-        case Footer
-    }
-    
-    enum CellStyle: String {
-        case Name
-        case Detail
-        case Time
-        
-        case AuthorName
-        case AuthorImage
-        case AuthorAge
-        
-        case LikeNumber
-        case FollowNumer
-    }
-}
- 
- ```
+ Turn UITableView delegate based API to block based API
  */
-
 
 class DataSourceAndDelegate<SectionStyle, CellStyle>: NSObject, UITableViewDataSource, UITableViewDelegate, UIUpatable {
     
@@ -217,8 +145,8 @@ struct Section<SectionStyle, CellStyle> {
 
 
 /// 默认的 SectionStyle , 通常在只有一种 Section 时使用
-enum SectionStyle {
-    case Default   //目录
+enum DefaultSectionStyle {
+    case Section   //目录
 }
 
 
