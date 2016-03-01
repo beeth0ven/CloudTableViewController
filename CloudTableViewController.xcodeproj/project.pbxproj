@@ -8,20 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		45544E211C83F52C00D8434B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45544E201C83F52C00D8434B /* AppDelegate.swift */; };
-		45544E231C83F52C00D8434B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45544E221C83F52C00D8434B /* ViewController.swift */; };
 		45544E261C83F52C00D8434B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45544E241C83F52C00D8434B /* Main.storyboard */; };
 		45544E281C83F52C00D8434B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45544E271C83F52C00D8434B /* Assets.xcassets */; };
 		45544E2B1C83F52C00D8434B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45544E291C83F52C00D8434B /* LaunchScreen.storyboard */; };
+		45544E341C83F56E00D8434B /* CloudTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45544E331C83F56E00D8434B /* CloudTableViewController.swift */; };
+		45544E361C83F5E400D8434B /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45544E351C83F5E400D8434B /* Queue.swift */; };
+		45544E3C1C84043C00D8434B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45544E3B1C84043C00D8434B /* Request.swift */; };
+		45624BD61C842B1C00BBC693 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45624BD51C842B1C00BBC693 /* DataController.swift */; };
+		45624BD81C8434A500BBC693 /* InternetIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45624BD71C8434A500BBC693 /* InternetIndicator.swift */; };
+		45624BDA1C84354600BBC693 /* DataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45624BD91C84354600BBC693 /* DataSourceAndDelegate.swift */; };
+		45624BDC1C8435D500BBC693 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45624BDB1C8435D500BBC693 /* Extension.swift */; };
+		A4443F3C140286E68340B5AD /* libPods-CloudTableViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0150381273353BF3DBD784EB /* libPods-CloudTableViewController.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0150381273353BF3DBD784EB /* libPods-CloudTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloudTableViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45544E1D1C83F52C00D8434B /* CloudTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45544E201C83F52C00D8434B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		45544E221C83F52C00D8434B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		45544E251C83F52C00D8434B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45544E271C83F52C00D8434B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45544E2A1C83F52C00D8434B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45544E2C1C83F52C00D8434B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45544E331C83F56E00D8434B /* CloudTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CloudTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		45544E351C83F5E400D8434B /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		45544E3B1C84043C00D8434B /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		45624BD11C84255200BBC693 /* CloudTableViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudTableViewController-Bridging-Header.h"; sourceTree = "<group>"; };
+		45624BD51C842B1C00BBC693 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DataController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		45624BD71C8434A500BBC693 /* InternetIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = InternetIndicator.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		45624BD91C84354600BBC693 /* DataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DataSourceAndDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		45624BDB1C8435D500BBC693 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		4F19E15B075F610A2A621B99 /* Pods-CloudTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudTableViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudTableViewController/Pods-CloudTableViewController.release.xcconfig"; sourceTree = "<group>"; };
+		CED273B24B0866C3BF3C2515 /* Pods-CloudTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudTableViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudTableViewController/Pods-CloudTableViewController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4443F3C140286E68340B5AD /* libPods-CloudTableViewController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +58,8 @@
 			children = (
 				45544E1F1C83F52C00D8434B /* CloudTableViewController */,
 				45544E1E1C83F52C00D8434B /* Products */,
+				A450F9AA947B2F352C957F5E /* Pods */,
+				8DEF194C4B4E70A08DAF53F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +74,46 @@
 		45544E1F1C83F52C00D8434B /* CloudTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				45544E201C83F52C00D8434B /* AppDelegate.swift */,
-				45544E221C83F52C00D8434B /* ViewController.swift */,
 				45544E241C83F52C00D8434B /* Main.storyboard */,
+				45544E331C83F56E00D8434B /* CloudTableViewController.swift */,
+				45624BD51C842B1C00BBC693 /* DataController.swift */,
+				45624BD91C84354600BBC693 /* DataSourceAndDelegate.swift */,
+				45544E321C83F53D00D8434B /* Supporting Files */,
+			);
+			path = CloudTableViewController;
+			sourceTree = "<group>";
+		};
+		45544E321C83F53D00D8434B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45624BD71C8434A500BBC693 /* InternetIndicator.swift */,
+				45544E3B1C84043C00D8434B /* Request.swift */,
+				45544E351C83F5E400D8434B /* Queue.swift */,
+				45624BDB1C8435D500BBC693 /* Extension.swift */,
+				45544E201C83F52C00D8434B /* AppDelegate.swift */,
 				45544E271C83F52C00D8434B /* Assets.xcassets */,
+				45624BD11C84255200BBC693 /* CloudTableViewController-Bridging-Header.h */,
 				45544E291C83F52C00D8434B /* LaunchScreen.storyboard */,
 				45544E2C1C83F52C00D8434B /* Info.plist */,
 			);
-			path = CloudTableViewController;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8DEF194C4B4E70A08DAF53F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0150381273353BF3DBD784EB /* libPods-CloudTableViewController.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A450F9AA947B2F352C957F5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CED273B24B0866C3BF3C2515 /* Pods-CloudTableViewController.debug.xcconfig */,
+				4F19E15B075F610A2A621B99 /* Pods-CloudTableViewController.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45544E2F1C83F52C00D8434B /* Build configuration list for PBXNativeTarget "CloudTableViewController" */;
 			buildPhases = (
+				73AE03B025559CD1CF1A869D /* Check Pods Manifest.lock */,
 				45544E191C83F52C00D8434B /* Sources */,
 				45544E1A1C83F52C00D8434B /* Frameworks */,
 				45544E1B1C83F52C00D8434B /* Resources */,
+				2A95AA650528EA4BBD17F7B9 /* Embed Pods Frameworks */,
+				A6CE61303374D3915E56C7D1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,13 +185,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A95AA650528EA4BBD17F7B9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudTableViewController/Pods-CloudTableViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73AE03B025559CD1CF1A869D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A6CE61303374D3915E56C7D1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudTableViewController/Pods-CloudTableViewController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		45544E191C83F52C00D8434B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45544E231C83F52C00D8434B /* ViewController.swift in Sources */,
+				45624BD61C842B1C00BBC693 /* DataController.swift in Sources */,
+				45624BDA1C84354600BBC693 /* DataSourceAndDelegate.swift in Sources */,
 				45544E211C83F52C00D8434B /* AppDelegate.swift in Sources */,
+				45544E3C1C84043C00D8434B /* Request.swift in Sources */,
+				45544E361C83F5E400D8434B /* Queue.swift in Sources */,
+				45624BD81C8434A500BBC693 /* InternetIndicator.swift in Sources */,
+				45544E341C83F56E00D8434B /* CloudTableViewController.swift in Sources */,
+				45624BDC1C8435D500BBC693 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,23 +356,30 @@
 		};
 		45544E301C83F52C00D8434B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CED273B24B0866C3BF3C2515 /* Pods-CloudTableViewController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CloudTableViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.beeth0ven.CloudTableViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CloudTableViewController/CloudTableViewController-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		45544E311C83F52C00D8434B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F19E15B075F610A2A621B99 /* Pods-CloudTableViewController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CloudTableViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.beeth0ven.CloudTableViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CloudTableViewController/CloudTableViewController-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +402,7 @@
 				45544E311C83F52C00D8434B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+Podfile.lock
+Pods/
+Education.xcworkspace
+Education.xcodeproj/xcuserdata/
+Education.xcodeproj/project.xcworkspace/
+.DS_Store
