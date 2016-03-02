@@ -62,21 +62,17 @@ class CloudTableViewController: UITableViewController, CloudTableViewControllerT
  
  ```
  */
-protocol CloudTableViewControllerType: class, UIUpatable {
+protocol CloudTableViewControllerType: DataControllerVCType, DataSourceAndDelegateTVCType {
     
     // MARK: - Required
-    typealias SectionStyle
-    typealias CellStyle
-    typealias DataController: CloudDataControllerType
     
     var canRefresh: Bool { get set }
     var multiPages: Bool { get set }
-    var tableView: UITableView! { get set }
     
-    func configureDataSourceAndDelegate()
 }
 
 extension CloudTableViewControllerType where Self: AnyObject {
+    
     // MARK: - Helper
     
     func setupDataSourceAndDelegate() {
@@ -84,7 +80,6 @@ extension CloudTableViewControllerType where Self: AnyObject {
         dataSourceAndDelegate.tableView = tableView
         configureDataSourceAndDelegate()
         enableRefreshIfNeeded()
-        
     }
     
     func enableRefreshIfNeeded() {
@@ -108,14 +103,7 @@ extension CloudTableViewControllerType where Self: AnyObject {
         
     }
     
-    func refreshData() {
-        dataController.getDataInBackground(
-            didGet: { [weak self] in
-                self?.updateUI()
-            }
-        )
-        updateUI()
-    }
+
     
     func getMoreData() {
         dataController.getMoreDataInBackground(
@@ -127,27 +115,7 @@ extension CloudTableViewControllerType where Self: AnyObject {
     
     // MARK: - Stored Properties
 
-    var dataController: DataController {
-        get {
-            if let result = objc_getAssociatedObject(self, &AssociatedKeys.DataController) as? DataController {
-                return result
-            }
-            let result = DataController()
-            objc_setAssociatedObject(self, &AssociatedKeys.DataController, result, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            return result
-        }
-        set { objc_setAssociatedObject(self, &AssociatedKeys.DataController, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
-    }
-    
-    var dataSourceAndDelegate: MJRefreshDSAD<SectionStyle, CellStyle> {
-        if let result = objc_getAssociatedObject(self, &AssociatedKeys.DataSourceAndDelegate) as? MJRefreshDSAD<SectionStyle, CellStyle> {
-            return result
-        }
-        let result = MJRefreshDSAD<SectionStyle, CellStyle>()
-        objc_setAssociatedObject(self, &AssociatedKeys.DataSourceAndDelegate, result, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        return result
-    }
-    
+
     var canRefreshAssociatedValue: Bool {
         get { return objc_getAssociatedObject(self, &AssociatedKeys.CanRefreshAssociatedValue) as? Bool ?? false }
         set { objc_setAssociatedObject(self, &AssociatedKeys.CanRefreshAssociatedValue, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
@@ -160,8 +128,6 @@ extension CloudTableViewControllerType where Self: AnyObject {
 }
 
 private struct AssociatedKeys {
-    static var DataController = "dataController"
-    static var DataSourceAndDelegate = "dataSourceAndDelegate"
     static var CanRefreshAssociatedValue = "canRefreshAssociatedValue"
     static var MultiPagesAssociatedValue = "multiPagesAssociatedValue"
 }
