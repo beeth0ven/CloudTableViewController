@@ -8,17 +8,9 @@
 
 import UIKit
 
-class CloudTableViewController: UITableViewController, CloudTableViewControllerType {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupDataSourceAndDelegate()
-        refreshData()
-    }
-    
-    // MARK: - Required
-    
-    typealias SectionStyle = DefaultSectionStyle
+class CloudTableViewController: UITableViewController {
+
+    // MARK: - Properties
     
     @IBInspectable var canRefresh: Bool {
         get { return canRefreshAssociatedValue }
@@ -29,6 +21,21 @@ class CloudTableViewController: UITableViewController, CloudTableViewControllerT
         get { return multiPagesAssociatedValue }
         set { multiPagesAssociatedValue = newValue }
     }
+    
+    // MARK: ViewController Life Cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        startup()
+    }
+    
+  }
+
+extension CloudTableViewController: CloudTableViewControllerType {
+    
+    // MARK: - CloudTableViewControllerType
+
+    typealias SectionStyle = DefaultSectionStyle
     
     func configureDataSourceAndDelegate() {
         
@@ -53,4 +60,5 @@ class CloudTableViewController: UITableViewController, CloudTableViewControllerT
     enum CellStyle {
         case Basic(String)
     }
+
 }

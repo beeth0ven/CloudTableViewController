@@ -75,11 +75,12 @@ extension CloudTableViewControllerType where Self: AnyObject {
     
     // MARK: - Helper
     
-    func setupDataSourceAndDelegate() {
+    func startup() {
         
         dataSourceAndDelegate.tableView = tableView
         configureDataSourceAndDelegate()
         enableRefreshIfNeeded()
+        refreshData()
     }
     
     func enableRefreshIfNeeded() {

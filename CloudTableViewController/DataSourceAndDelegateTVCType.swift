@@ -24,7 +24,7 @@ extension DataSourceAndDelegateTVCType where Self: AnyObject {
     
     // MARK: - Helper
     
-    func setupDataSourceAndDelegate() {
+    func startup() {
         
         dataSourceAndDelegate.tableView = tableView
         configureDataSourceAndDelegate()

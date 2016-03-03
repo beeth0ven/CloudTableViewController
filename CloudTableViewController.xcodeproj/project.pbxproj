@@ -86,9 +86,9 @@
 				45624BDD1C8533B700BBC693 /* CloudDataControllerType.swift */,
 				45544E241C83F52C00D8434B /* Main.storyboard */,
 				45544E331C83F56E00D8434B /* CloudTableViewController.swift */,
-				459D97191C855C3F00387157 /* CloudTableViewControllerType.swift */,
 				45DA412B1C86DB5A003D392A /* CloudViewControllerType.swift */,
 				45DA412D1C86E097003D392A /* DataSourceAndDelegateTVCType.swift */,
+				459D97191C855C3F00387157 /* CloudTableViewControllerType.swift */,
 				45544E321C83F53D00D8434B /* Supporting Files */,
 			);
 			path = CloudTableViewController;

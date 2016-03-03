@@ -19,6 +19,9 @@ protocol DataControllerVCType: class, UIUpatable {
 extension DataControllerVCType where Self: AnyObject {
     
     // MARK: - Helper
+    func startup() {
+        refreshData() 
+    }
     
     func refreshData() {
         dataController.getDataInBackground(

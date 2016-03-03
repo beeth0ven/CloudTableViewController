@@ -3,3 +3,10 @@
 //
 
 #import "MJRefresh.h"
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialSinaSSOHandler.h"
+#import "UMSocialQQHandler.h"
+
+#import "WXApi.h"
+#import "WXApiObject.h"
