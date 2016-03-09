@@ -155,8 +155,10 @@ class MJRefreshDSAD<SectionStyle, CellStyle>: DataSourceAndDelegate<SectionStyle
     
     var mjRefreshClosure: (() -> Void)?     { didSet { updateMJHeaderIfNeeded() } }
     var mjGetMoreDataClosure: (() -> Void)? { didSet { updateMJFooterIfNeeded() } }
+    var noMoreDataTitle: String?
     
-    func updateMJHeaderIfNeeded() {
+    
+    private func updateMJHeaderIfNeeded() {
         
         if let closure = mjRefreshClosure {
             tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: closure)
@@ -165,12 +167,26 @@ class MJRefreshDSAD<SectionStyle, CellStyle>: DataSourceAndDelegate<SectionStyle
         }
     }
     
-    func updateMJFooterIfNeeded() {
+    private func updateMJFooterIfNeeded() {
         if let closure = mjGetMoreDataClosure {
-            tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: closure)
+            tableView.mj_footer =  MJRefreshAutoNormalFooter(refreshingBlock: closure, noMoreDataTitle: noMoreDataTitle)
         } else {
             tableView.mj_footer = nil
         }
     }
     
 }
+
+
+extension MJRefreshAutoNormalFooter {
+    
+    convenience init(refreshingBlock: () -> Void, noMoreDataTitle: String?) {
+        self.init(refreshingBlock: refreshingBlock)
+        
+        if let noMoreDataTitle = noMoreDataTitle {
+            
+            self.setTitle(noMoreDataTitle, forState: .NoMoreData)
+        }
+    }
+}
+

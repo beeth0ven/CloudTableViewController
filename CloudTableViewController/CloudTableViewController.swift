@@ -10,18 +10,6 @@ import UIKit
 
 class CloudTableViewController: UITableViewController {
 
-    // MARK: - Properties
-    
-    @IBInspectable var canRefresh: Bool {
-        get { return canRefreshAssociatedValue }
-        set { canRefreshAssociatedValue = newValue }
-    }
-    
-    @IBInspectable var multiPages: Bool {
-        get { return multiPagesAssociatedValue }
-        set { multiPagesAssociatedValue = newValue }
-    }
-    
     // MARK: ViewController Life Cycle
 
     override func viewDidLoad() {
@@ -34,8 +22,19 @@ class CloudTableViewController: UITableViewController {
 extension CloudTableViewController: CloudTableViewControllerType {
     
     // MARK: - CloudTableViewControllerType
-
+    
     typealias SectionStyle = DefaultSectionStyle
+
+    @IBInspectable var canRefresh: Bool {
+        get { return canRefreshAssociatedValue }
+        set { canRefreshAssociatedValue = newValue }
+    }
+    
+    @IBInspectable var multiPages: Bool {
+        get { return multiPagesAssociatedValue }
+        set { multiPagesAssociatedValue = newValue }
+    }
+    
     
     func configureDataSourceAndDelegate() {
         
